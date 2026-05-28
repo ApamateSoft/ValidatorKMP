@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.apamatesoft"
-version = "2.0.0-beta01"
+version = "1.0.0"
 
 kotlin {
     androidTarget {
