@@ -3,5 +3,6 @@ build/
 .idea/
 *.iml
 local.properties
+.kotlin/
 src_old/
 TEST_PLAN.md
