@@ -5,12 +5,24 @@ Facilitates the validation of Strings by chaining series of rules. Kotlin Multip
 ## Translations
 - [Spanish](translations/README-es.md)
 
+[![Maven Central](https://img.shields.io/maven-central/v/com.apamatesoft/ValidatorKMP?color=blue)](https://central.sonatype.com/artifact/com.apamatesoft/ValidatorKMP)
+
 ## Installation
 
-### Gradle (Android)
+### Gradle (Android / KMP)
 
 ```kotlin
-implementation("com.apamatesoft:ValidatorKMP:2.0.0-beta01")
+implementation("com.apamatesoft:ValidatorKMP:1.0.0")
+```
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>com.apamatesoft</groupId>
+    <artifactId>ValidatorKMP</artifactId>
+    <version>1.0.0</version>
+</dependency>
 ```
 
 ### Swift Package Manager (iOS)
@@ -22,7 +34,7 @@ implementation("com.apamatesoft:ValidatorKMP:2.0.0-beta01")
 ```swift
 .binaryTarget(
     name: "ValidatorKMP",
-    url: "https://github.com/ApamateSoft/ValidatorKMP/releases/download/2.0.0-beta01/ValidatorKMP.xcframework.zip",
+    url: "https://github.com/ApamateSoft/ValidatorKMP/releases/download/1.0.0/ValidatorKMP.xcframework.zip",
     checksum: "<<<SHA256_OF_ZIP>>>"
 )
 ```

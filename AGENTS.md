@@ -35,6 +35,7 @@ Senior Kotlin Multiplatform developer. Expert in KMP library design, expect/actu
 | Añadir alfabeto o regex | Constante + test | → `.ia/skills/add_alphabet_or_regex.md` |
 | Añadir idioma de mensajes | Implementar Messages + test | → `.ia/skills/add_messages_language.md` |
 | Crear nueva skill | Template | → `.ia/skills/SKILL_TEMPLATE.md` |
+| Publicar en Maven Central | Release manual con firma GPG | → `.ia/skills/deploy_to_maven_central.md` |
 
 ## Creating New Skills
 

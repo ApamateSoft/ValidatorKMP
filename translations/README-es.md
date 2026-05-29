@@ -4,12 +4,24 @@ Versión en [Inglés](../README.md)
 
 Facilita la validación de Strings encadenando una serie de reglas. Librería Kotlin Multiplatform para **Android** e **iOS**.
 
+[![Maven Central](https://img.shields.io/maven-central/v/com.apamatesoft/ValidatorKMP?color=blue)](https://central.sonatype.com/artifact/com.apamatesoft/ValidatorKMP)
+
 ## Instalación
 
-### Gradle (Android)
+### Gradle (Android / KMP)
 
 ```kotlin
-implementation("com.apamatesoft:ValidatorKMP:2.0.0-beta01")
+implementation("com.apamatesoft:ValidatorKMP:1.0.0")
+```
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>com.apamatesoft</groupId>
+    <artifactId>ValidatorKMP</artifactId>
+    <version>1.0.0</version>
+</dependency>
 ```
 
 ### Swift Package Manager (iOS)
@@ -21,7 +33,7 @@ implementation("com.apamatesoft:ValidatorKMP:2.0.0-beta01")
 ```swift
 .binaryTarget(
     name: "ValidatorKMP",
-    url: "https://github.com/ApamateSoft/ValidatorKMP/releases/download/2.0.0-beta01/ValidatorKMP.xcframework.zip",
+    url: "https://github.com/ApamateSoft/ValidatorKMP/releases/download/1.0.0/ValidatorKMP.xcframework.zip",
     checksum: "<<<SHA256_OF_ZIP>>>"
 )
 ```
