@@ -9,15 +9,12 @@ import platform.Foundation.NSCalendar
 import platform.Foundation.NSCalendarUnitYear
 import platform.Foundation.NSCalendarUnitMonth
 import platform.Foundation.NSCalendarUnitDay
-import platform.Foundation.NSCalendarOptions
-import platform.Foundation.NSLocale
 import platform.Foundation.date
-import platform.Foundation.timeIntervalSince
+import platform.Foundation.timeIntervalSinceDate
 
 actual fun validateDate(evaluate: String, format: DateFormats): Boolean {
     val formatter = NSDateFormatter()
     formatter.dateFormat = format.pattern()
-    formatter.locale = NSLocale.currentLocale
     val pattern = format.pattern()
     if (evaluate.length != pattern.length) return false
     return formatter.dateFromString(evaluate) != null
@@ -26,7 +23,6 @@ actual fun validateDate(evaluate: String, format: DateFormats): Boolean {
 actual fun validateMinAge(evaluate: String, format: DateFormats, age: Int): Boolean {
     val formatter = NSDateFormatter()
     formatter.dateFormat = format.pattern()
-    formatter.locale = NSLocale.currentLocale
     val evaluateDate = formatter.dateFromString(evaluate) ?: return false
     val calendar = NSCalendar.currentCalendar
     val now = NSDate()
@@ -34,7 +30,7 @@ actual fun validateMinAge(evaluate: String, format: DateFormats, age: Int): Bool
         NSCalendarUnitYear or NSCalendarUnitMonth or NSCalendarUnitDay,
         fromDate = evaluateDate,
         toDate = now,
-        options = NSCalendarOptions(0)
+        options = 0UL
     )
     val years = components.year.toInt()
     return years >= age
@@ -43,7 +39,6 @@ actual fun validateMinAge(evaluate: String, format: DateFormats, age: Int): Bool
 actual fun validateExpirationDate(evaluate: String, format: DateFormats): Boolean {
     val formatter = NSDateFormatter()
     formatter.dateFormat = format.pattern()
-    formatter.locale = NSLocale.currentLocale
     val evaluateDate = formatter.dateFromString(evaluate) ?: return false
-    return NSDate().timeIntervalSince(evaluateDate) > 0.0
+    return NSDate().timeIntervalSinceDate(evaluateDate) > 0.0
 }

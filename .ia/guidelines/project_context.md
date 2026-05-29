@@ -51,6 +51,6 @@ ValidatorKMP es una librería Kotlin Multiplatform que facilita la validación d
 
 ## Publicación
 
-- Maven coordinate: `com.apamatesoft:ValidatorKMP:2.0.0-beta01`
+- Maven coordinate: `com.apamatesoft:ValidatorKMP:1.0.0`
 - iOS: XCFramework `ValidatorKMP` distribuido como binary target
 - Repositorio: `https://github.com/ApamateSoft/ValidatorKMP`

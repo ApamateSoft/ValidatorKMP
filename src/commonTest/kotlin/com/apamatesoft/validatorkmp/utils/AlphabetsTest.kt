@@ -2,6 +2,7 @@ package com.apamatesoft.validatorkmp.utils
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 class AlphabetsTest {
 
@@ -33,7 +34,7 @@ class AlphabetsTest {
     fun alphabetEs_containsSpanishChars() {
         val es = Alphabets.ALPHABET_ES
         listOf('ñ', 'Ñ', 'á', 'Á', 'é', 'É', 'í', 'Í', 'ó', 'Ó', 'ú', 'Ú', 'ü', 'Ü').forEach {
-            assert(es.contains(it)) { "ALPHABET_ES should contain '$it'" }
+            assertTrue(es.contains(it), "ALPHABET_ES should contain '$it'")
         }
     }
 
